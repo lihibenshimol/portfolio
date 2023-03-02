@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: $clr1;
+    // color: $clr6;
+}
+
+html {
+    line-height: 1.6;
+    font-family: lato;
+}
+
+body {
+    font-size: rem(14px);
+    margin: 0;
+    // font-family: system-ui,'Segoe UI', 'roboto', 'ubuntu', 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: $clr1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    // font-family: 'karla', sans-serif;
+
+    margin: 0 0 0.6em;
+    line-height: 1;
+}
+
+a {
+    text-decoration: none;
+    color: $clr3;
+    cursor: pointer;
+  
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    background-color: transparent;
+    // font-family: system-ui,'Segoe UI', 'roboto', 'ubuntu', 'Open Sans', 'Helvetica Neue', sans-serif;
+}

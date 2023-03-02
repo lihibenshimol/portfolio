@@ -1,0 +1,73 @@
+.black-bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.502);
+    position: fixed;
+    z-index: 4;
+}
+
+.contact-form {
+    position: fixed;
+    top: 20vh;
+    left: 43%;
+    color: black;
+    height: 400px;
+    width: 300px;
+    border-radius: 8px;
+    background-color: rgba(244, 240, 234, 0.797);
+    z-index: 5;
+    padding: 15px;
+    font-family: lato;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    @include for-mobile-layout {
+        left: 15%;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+
+        input,
+        textarea {
+            border: .2px solid rgba(79, 79, 79, 0.601);
+            padding: 5px;
+            border-radius: 4px;
+            font-family: karla;
+            resize: none;
+        }
+
+        .actions {
+            align-self: center;
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+
+            button {
+                border: none;
+                background-color: $clr0;
+                padding: 6px;
+                border-radius: 4px;
+                color: #fff5f5;
+                border: .2px solid rgba(163, 160, 160, 0.158);
+                transition: .4s;
+                
+                &:hover {
+                    background-color: #3c6282;
+                }
+            }
+        }
+    }
+
+
+
+}
