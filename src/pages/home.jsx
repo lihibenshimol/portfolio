@@ -2,9 +2,7 @@ import { useState } from 'react';
 import { BsGithub, BsLinkedin, BsWhatsapp } from 'react-icons/bs'
 import { SiGmail } from 'react-icons/si'
 import { Link } from "react-router-dom";
-import { About } from '../cpms/about';
 import { DynamicCmp } from '../cpms/dyn-cmp';
-import { Project } from '../cpms/project';
 import '../lib/animate.css'
 import { ContactForm } from '../cpms/contact-form';
 
