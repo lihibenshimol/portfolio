@@ -32,73 +32,74 @@ export function Home() {
 
     return (
         <>
-            <header className="app-header main-container">
 
-                <div className="pages">
+                <header className="app-header main-container">
 
-                    <div className="btn-scroll" onClick={() => handleClickScroll('about')}>
-                        About
+                    <div className="pages">
+
+                        <div className="btn-scroll" onClick={() => handleClickScroll('about')}>
+                            About
+                        </div>
+
+                        <div className="btn-scroll" onClick={() => handleClickScroll('project')}>
+                            Projects
+                        </div>
+
+                        <div className="btn-scroll" onClick={() => toggleContactPopup(!contactPopup)}>
+                            Contact
+                        </div>
+
+
+                    </div>
+                </header>
+                <main className="home">
+                    <div className="intro">
+                        <h2 className='animate__animated animate__fadeIn'> Hi, I'm <hr /></h2>
+                        <h1 className="stroke shadow name animate__animated animate__fadeInLeftBig">Lihi Ben Shimol</h1>
                     </div>
 
-                    <div className="btn-scroll" onClick={() => handleClickScroll('project')}>
-                        Projects
+
+                    <div className="contact animate__animated animate__fadeInLeftBig">
+
+                        <a
+                            href="https://github.com/lihibenshimol"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title='Github'
+                        >
+                            <BsGithub />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/lihi-ben-shimol/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title='Linkedin'
+                        >
+                            <BsLinkedin />
+                        </a>
+                        <a
+                            href="https://wa.me/+972542390294"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title='Whatsapp'
+                        >
+                            <BsWhatsapp />
+                        </a>
+                        <Link to='#'
+                            onClick={(e) => {
+                                window.location.href = "mailto:lihibs26@gmail.com";
+                                e.preventDefault();
+                            }} >
+                            <SiGmail />
+                        </Link>
                     </div>
-
-                    <div className="btn-scroll" onClick={() => toggleContactPopup(!contactPopup)}>
-                        Contact
-                    </div>
+                    {contactPopup && <ContactForm toggleContactPopup={toggleContactPopup} />}
 
 
-                </div>
-            </header>
-            <main className="home">
-                <div className="intro">
-                    <h2 className='animate__animated animate__fadeIn'> Hi, I'm <hr /></h2>
-                    <h1 className="stroke shadow name animate__animated animate__fadeInLeftBig">Lihi Ben Shimol</h1>
-                </div>
-
-
-                <div className="contact animate__animated animate__fadeInLeftBig">
-                 
-                    <a
-                        href="https://github.com/lihibenshimol"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title='Github'
-                    >
-                        <BsGithub />
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/lihi-ben-shimol/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title='Linkedin'
-                    >
-                        <BsLinkedin />
-                    </a>
-                    <a
-                        href="https://wa.me/+972542390294"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title='Whatsapp'
-                    >
-                        <BsWhatsapp />
-                    </a>
-                    <Link to='#'
-                        onClick={(e) => {
-                            window.location.href = "mailto:lihibs26@gmail.com";
-                            e.preventDefault();
-                        }} >
-                        <SiGmail />
-                    </Link>
-                </div>
-            {contactPopup && <ContactForm toggleContactPopup={toggleContactPopup}/>}
-
-
-            </main>
+                </main>
 
                 <DynamicCmp type={type} />
 
-        </>
-    )
+            </>
+            )
 }
